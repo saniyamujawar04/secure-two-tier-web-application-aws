@@ -51,3 +51,7 @@ The application is hosted on Amazon EC2 and securely communicates with Amazon RD
 ## Project Outcome
 
 Successfully deployed a secure cloud-based web application demonstrating networking, security, storage, and database integration using AWS services.
+
+## Architecture Diagram
+
+![AWS Architecture](AWS%202-Tier%20Web%20Application%20Architecture.png)
