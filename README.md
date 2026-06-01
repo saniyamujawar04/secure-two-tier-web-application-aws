@@ -14,6 +14,42 @@ The application provides a user registration interface developed using HTML, CSS
 
 ---
 
+## Project Screenshots
+
+### User Registration Interface
+
+![User Registration](screenshots/user-registration-interface.jpg)
+
+### EC2 Instance Running Application
+
+![EC2 Instance](screenshots/ec2-instance-running-web-aap.jpg)
+
+### Amazon RDS Database
+
+![RDS Database](screenshots/rds-database-instance.jpg)
+
+### Amazon S3 Bucket
+
+![S3 Bucket](screenshots/s3-bucket.jpg)
+
+### Uploaded File Stored in Amazon S3
+
+![Uploaded File](screenshots/uploaded-file-stored-in-s3Bucket.jpg)
+
+### AWS Secrets Manager Configuration
+
+![Secrets Manager](screenshots/AWS-Secret-Manager-configuration.jpg)
+
+### VPC Configuration
+
+![VPC Configuration](screenshots/vpc configuration.jpg)
+
+### User Data Stored in Database
+
+![Database Data](screenshots/user-data-stored-in-database.jpg)
+
+---
+
 ## AWS Services Used
 
 * Amazon EC2
