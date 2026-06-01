@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project demonstrates the design and deployment of a secure Two-Tier Web Application using Amazon Web Services (AWS). The architecture consists of a web application layer hosted on Amazon EC2 and a database layer hosted on Amazon RDS.
+This project demonstrates the deployment of a secure Two-Tier Web Application using Amazon Web Services (AWS). The architecture consists of a web application layer hosted on Amazon EC2 and a database layer hosted on Amazon RDS.
 
-The application allows users to register and upload files through a web interface. User information is securely stored in Amazon RDS, while uploaded files are stored in Amazon S3. AWS IAM, Security Groups, VPC, and AWS Secrets Manager are used to implement secure access control, networking, and credential management.
+The application provides a user registration interface developed using HTML, CSS, and JavaScript. User information is stored in Amazon RDS (MySQL), while uploaded files are stored in Amazon S3. AWS IAM, VPC, Security Groups, and AWS Secrets Manager are used to implement secure access control, networking, and credential management.
 
 ---
 
@@ -29,8 +29,6 @@ The application allows users to register and upload files through a web interfac
 ## Technologies Used
 
 * AWS Cloud
-* Node.js
-* Express.js
 * HTML
 * CSS
 * JavaScript
@@ -45,27 +43,39 @@ The application allows users to register and upload files through a web interfac
 * Secure File Upload to Amazon S3
 * User Data Storage in Amazon RDS
 * IAM-Based Access Control
-* Secure Credential Management using AWS Secrets Manager
+* Secure Credential Management
 * Virtual Private Cloud (VPC) Configuration
 * Security Group Configuration
-* Database Connectivity from EC2
-* Dynamic Data Retrieval
+* Database Connectivity
 * Cloud-Based Deployment
-* Error Handling and Input Validation
 * Two-Tier Architecture Implementation
+
+---
+
+## Project Structure
+
+```text
+loginpage-main/
+│
+├── .github/
+├── .gitignore
+├── index.html
+├── style.css
+├── package.json
+└── package-lock.json
+```
 
 ---
 
 ## Project Workflow
 
 1. User accesses the web application hosted on Amazon EC2.
-2. User submits registration details and uploads files.
-3. Application validates user input and permissions.
-4. Database credentials are securely retrieved from AWS Secrets Manager.
-5. User data is stored in Amazon RDS.
-6. Uploaded files are stored in Amazon S3.
-7. IAM roles and Security Groups control access between AWS resources.
-8. The application returns a secure response to the user.
+2. User enters registration details through the web interface.
+3. Application processes and stores user information in Amazon RDS.
+4. Uploaded files are securely stored in Amazon S3.
+5. IAM roles and Security Groups control access between AWS resources.
+6. AWS Secrets Manager securely stores sensitive credentials.
+7. The application returns a successful response to the user.
 
 ---
 
@@ -74,13 +84,13 @@ The application allows users to register and upload files through a web interfac
 ### Application Layer
 
 * Hosted on Amazon EC2
-* Built using Node.js and Express.js
-* Handles request processing and business logic
+* Frontend developed using HTML, CSS, and JavaScript
+* Handles user interactions and data submission
 
 ### Database Layer
 
 * Hosted on Amazon RDS (MySQL)
-* Stores user registration data and metadata
+* Stores user registration information
 
 ### Storage Layer
 
@@ -106,21 +116,19 @@ The application allows users to register and upload files through a web interfac
 * Database Connectivity
 * Cloud Security
 * Web Application Deployment
-* File Storage Management
+* Amazon S3 Storage Management
 * Networking Fundamentals
-* Secrets Management
 * AWS Infrastructure Deployment
 
 ---
 
 ## Security Implementation
 
-* Configured VPC with public and private networking.
-* Implemented Security Groups to restrict unauthorized access.
-* Used IAM roles and policies for resource-level permissions.
+* Configured VPC with secure networking.
+* Implemented Security Groups to control inbound and outbound traffic.
+* Used IAM roles and policies for resource access management.
 * Stored sensitive credentials securely using AWS Secrets Manager.
-* Restricted database access to trusted resources only.
-* Implemented secure communication between application and database layers.
+* Restricted database access to authorized resources only.
 
 ---
 
@@ -134,9 +142,9 @@ The application allows users to register and upload files through a web interfac
 
 ### Integration Testing
 
-* EC2 ↔ RDS Connectivity
-* EC2 ↔ S3 Integration
-* Secrets Manager Integration
+* EC2 to RDS Connectivity
+* EC2 to S3 Integration
+* AWS Service Connectivity
 
 ### Security Testing
 
@@ -144,45 +152,38 @@ The application allows users to register and upload files through a web interfac
 * Security Group Verification
 * Credential Protection
 
-### Validation Testing
-
-* Input Validation
-* Error Handling
-
 ---
 
 ## Challenges Faced
 
 * Configuring secure connectivity between Amazon EC2 and Amazon RDS.
 * Managing IAM roles and permissions.
-* Integrating AWS Secrets Manager with the application.
-* Configuring Security Groups and network access controls.
-* Implementing secure file upload and storage in Amazon S3.
-* Troubleshooting deployment and connectivity issues.
+* Configuring Security Groups and VPC networking.
+* Integrating Amazon S3 for file storage.
+* Troubleshooting cloud deployment and connectivity issues.
 
 ---
 
 ## Project Outcome
 
-Successfully deployed a secure cloud-based two-tier web application demonstrating AWS infrastructure management, networking, security implementation, database integration, file storage, and cloud deployment best practices.
+Successfully deployed a secure cloud-based Two-Tier Web Application demonstrating AWS infrastructure management, networking, security implementation, database integration, file storage, and cloud deployment best practices.
 
 ---
 
 ## Future Enhancements
 
-* Load Balancer Integration
-* Auto Scaling Configuration
+* Application Load Balancer (ALB)
+* Auto Scaling Group (ASG)
 * AWS CloudWatch Monitoring
-* CI/CD Pipeline Integration
-* Multi-Tier Architecture
+* CI/CD Pipeline using Jenkins
+* Docker Containerization
 * Kubernetes Deployment
-* Advanced Authentication Mechanisms
+* Multi-Tier Architecture
 
 ---
 
-Author
+## Author
 
-Saniya Faruque Mujawar
+**Saniya Faruque Mujawar**
 
-Aspiring DevOps Engineer | AWS Cloud | Linux | CI/CD | Jenkins | Docker | GitHub
-
+Aspiring DevOps Engineer | AWS Cloud | Linux | Jenkins | Docker | GitHub | CI/CD
