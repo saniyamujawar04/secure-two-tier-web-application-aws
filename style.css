@@ -1,0 +1,240 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f0ff 0%, #f0f8ff 40%, #e8f5e9 100%);
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem 2.25rem;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.06),
+    0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.logo svg {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 4px 12px rgba(79, 172, 254, 0.4));
+}
+
+.card-header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.3px;
+}
+
+.card-header p {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #4facfe;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #0090f0;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.875rem;
+  width: 16px;
+  height: 16px;
+  color: #a0aec0;
+  pointer-events: none;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 0.7rem 0.875rem 0.7rem 2.5rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #2d3748;
+  background: #fafbfc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #c3cdd8;
+  font-size: 0.85rem;
+}
+
+.input-wrapper input:focus {
+  border-color: #4facfe;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+}
+
+.input-wrapper input:focus + .input-icon,
+.input-wrapper:focus-within .input-icon {
+  color: #4facfe;
+}
+
+.file-input-wrapper {
+  position: relative;
+  border: 2px dashed #cbd5e0;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background: #fafbfc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-input-wrapper:hover {
+  border-color: #4facfe;
+  background: #f0f8ff;
+}
+
+.file-input-wrapper.drag-over {
+  border-color: #4facfe;
+  background: #e0f0ff;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+}
+
+.file-icon {
+  width: 32px;
+  height: 32px;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.file-input-wrapper:hover .file-icon {
+  color: #4facfe;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.file-input-wrapper:hover .file-label {
+  color: #2d3748;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+  margin-top: 0.25rem;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.35);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .card-header h1 {
+    font-size: 1.4rem;
+  }
+}
